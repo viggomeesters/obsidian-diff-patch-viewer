@@ -1,0 +1,83 @@
+.diff-patch-viewer {
+  padding: 16px;
+}
+
+.diff-patch-viewer__header {
+  border-bottom: 1px solid var(--background-modifier-border);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+}
+
+.diff-patch-viewer__summary,
+.diff-patch-viewer__stats,
+.diff-patch-viewer__notice {
+  color: var(--text-muted);
+}
+
+.diff-patch-viewer__files {
+  background: var(--background-secondary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+.diff-patch-viewer__file-link {
+  font-family: var(--font-monospace);
+  padding: 4px 0;
+}
+
+.diff-patch-viewer__file {
+  margin-top: 20px;
+}
+
+.diff-patch-viewer__hunk {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  margin: 12px 0;
+  overflow: hidden;
+}
+
+.diff-patch-viewer__hunk h4 {
+  background: var(--background-secondary);
+  font-family: var(--font-monospace);
+  font-size: var(--font-ui-small);
+  margin: 0;
+  padding: 8px 12px;
+}
+
+.diff-patch-viewer__code,
+.diff-patch-viewer__raw {
+  background: var(--background-primary);
+  font-family: var(--font-monospace);
+  font-size: var(--font-smaller);
+  margin: 0;
+  overflow-x: auto;
+  padding: 8px 0;
+  white-space: pre;
+}
+
+.diff-patch-viewer__raw {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.diff-patch-viewer__line {
+  min-height: 1.4em;
+  padding: 0 12px;
+}
+
+.diff-patch-viewer__line--addition {
+  background: rgba(var(--color-green-rgb), 0.16);
+  color: var(--text-normal);
+}
+
+.diff-patch-viewer__line--deletion {
+  background: rgba(var(--color-red-rgb), 0.16);
+  color: var(--text-normal);
+}
+
+.diff-patch-viewer__line--meta {
+  color: var(--text-faint);
+}

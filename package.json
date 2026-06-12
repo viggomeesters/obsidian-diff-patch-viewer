@@ -1,0 +1,24 @@
+{
+  "name": "obsidian-diff-patch-viewer",
+  "version": "0.0.1",
+  "description": "Read-only .diff/.patch viewer for Obsidian.",
+  "license": "MIT",
+  "author": "Viggo Meesters",
+  "type": "module",
+  "scripts": {
+    "build": "NODE_ENV=production node esbuild.config.mjs",
+    "dev": "node esbuild.config.mjs",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run build:test && node --test tests/*.test.mjs",
+    "build:test": "esbuild src/parser.ts --bundle --platform=node --format=esm --outfile=dist/parser.mjs && esbuild src/main.ts --bundle --platform=node --format=cjs --external:obsidian --outfile=dist/main.cjs",
+    "sync:test-vault": "npm run build && node scripts/sync-test-vault.mjs",
+    "smoke:cdp": "node scripts/smoke-cdp.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "esbuild": "^0.25.12",
+    "obsidian": "^1.8.7",
+    "typescript": "^5.9.3"
+  }
+}
