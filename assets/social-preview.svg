@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Diff/Patch Viewer">
+  <rect width="1200" height="630" rx="32" fill="#0f172a"/>
+  <text x="80" y="300" fill="white" font-family="Arial, sans-serif" font-size="72" font-weight="700">Diff/Patch Viewer</text>
+  <text x="80" y="390" fill="white" font-family="Arial, sans-serif" font-size="34">Render .diff and .patch files read-only.</text>
+</svg>
