@@ -1,6 +1,6 @@
 {
   "name": "obsidian-diff-patch-viewer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Read-only .diff/.patch viewer for Obsidian.",
   "license": "MIT",
   "author": "Viggo Meesters",
