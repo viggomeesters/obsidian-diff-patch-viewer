@@ -1,7 +1,7 @@
 {
   "id": "diff-patch-viewer",
-  "name": "Diff/Patch Viewer",
-  "version": "0.1.0",
+  "name": "Diff and Patch Viewer",
+  "version": "0.1.1",
   "minAppVersion": "1.5.0",
   "description": "Read-only viewer for .diff and .patch files with file, hunk, and additions/deletions summaries.",
   "author": "Viggo Meesters",

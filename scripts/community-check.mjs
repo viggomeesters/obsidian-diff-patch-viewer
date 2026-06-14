@@ -4,6 +4,9 @@ const manifest = JSON.parse(fs.readFileSync("manifest.json", "utf8"));
 const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8"));
 const versions = JSON.parse(fs.readFileSync("versions.json", "utf8"));
 
+const allowedManifestNamePattern = /^[A-Za-z0-9 ()+-]+$/;
+const lowerName = manifest.name.toLowerCase();
+
 const checks = [
   [fs.existsSync("README.md"), "README.md exists at repository root"],
   [fs.existsSync("LICENSE"), "LICENSE exists at repository root"],
@@ -20,7 +23,9 @@ const checks = [
   [!manifest.id.includes("obsidian"), "manifest id does not contain obsidian"],
   [!manifest.id.endsWith("plugin"), "manifest id does not end with plugin"],
   [manifest.id === "diff-patch-viewer", "manifest id is diff-patch-viewer"],
-  [manifest.name === "Diff/Patch Viewer", "manifest name is Diff/Patch Viewer"],
+  [manifest.name === "Diff and Patch Viewer", "manifest name is Diff and Patch Viewer"],
+  [allowedManifestNamePattern.test(manifest.name), "manifest name uses only Basic Latin letters/numbers/spaces and allowed punctuation: hyphen, plus, parentheses"],
+  [!lowerName.includes("obsidian") && !lowerName.includes("obsi-") && !lowerName.includes("-sidian"), "manifest name avoids Obsidian and Obsidian-like variations"],
   [typeof manifest.description === "string" && manifest.description.length > 0, "manifest description is present"],
   [!manifest.description.toLowerCase().includes("obsidian"), "manifest description avoids redundant product naming"],
   [typeof manifest.author === "string" && manifest.author.length > 0, "manifest author is present"],

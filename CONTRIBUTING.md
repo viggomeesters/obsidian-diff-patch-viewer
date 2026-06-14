@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve Diff/Patch Viewer.
+Thanks for helping improve Diff and Patch Viewer.
 
 ## Local setup
 

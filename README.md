@@ -1,10 +1,10 @@
-# Diff/Patch Viewer
+# Diff and Patch Viewer
 
 Read-only Obsidian viewer for `.diff` and `.patch` files.
 
 ## Scope
 
-This plugin only renders diff/patch files. It does **not** apply patches, call `git`, modify files, or bundle unrelated Git Viewer behavior.
+This plugin only renders diff and patch files. It does **not** apply patches, call `git`, modify files, or bundle unrelated Git Viewer behavior.
 
 ## Features
 

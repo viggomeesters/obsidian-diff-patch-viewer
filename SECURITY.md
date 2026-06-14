@@ -12,4 +12,4 @@ Do not include sensitive vault content in public issues. Reduce reproductions to
 
 ## Security posture
 
-Diff/Patch Viewer is read-only. It reads `.diff` and `.patch` files through the vault API and renders a local inspection view. It does not apply patches, call git, modify files, send vault content to external services, use runtime network APIs, or access the clipboard.
+Diff and Patch Viewer is read-only. It reads `.diff` and `.patch` files through the vault API and renders a local inspection view. It does not apply patches, call git, modify files, send vault content to external services, use runtime network APIs, or access the clipboard.
