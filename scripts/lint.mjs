@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const textExtensions = new Set([".ts", ".js", ".mjs", ".json", ".md", ".css", ".yml", ".yaml"]);
-const ignoredDirs = new Set([".git", "node_modules", "dist"]);
+const ignoredDirs = new Set([".git", ".go", "node_modules", "dist"]);
 const root = process.cwd();
 const failures = [];
 

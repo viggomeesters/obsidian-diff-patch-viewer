@@ -56,7 +56,7 @@ class DiffPatchView extends FileView {
 
     const fileList = this.contentEl.createEl("nav", { cls: "diff-patch-viewer__files", attr: { "aria-label": "Changed files" } });
     for (const diffFile of parsed.files) {
-      fileList.createEl("div", {
+      fileList.createDiv({
         cls: "diff-patch-viewer__file-link",
         text: `${displayPath(diffFile)}  +${diffFile.additions} / -${diffFile.deletions}`,
       });
@@ -103,7 +103,7 @@ function displayPath(file: DiffFile): string {
 }
 
 function renderLine(line: DiffLine): HTMLElement {
-  const element = document.createElement("div");
+  const element = createDiv();
   element.className = `diff-patch-viewer__line diff-patch-viewer__line--${line.kind}`;
   element.textContent = line.text;
   return element;
