@@ -14,6 +14,10 @@ This plugin only renders diff and patch files. It does **not** apply patches, ca
 - highlights additions and deletions;
 - falls back to raw read-only text when no unified diff hunk is detected.
 
+## Installation
+
+Install [Diff and Patch Viewer from the Obsidian Community plugin directory](https://community.obsidian.md/plugins/diff-patch-viewer).
+
 ## Development
 
 ```bash
